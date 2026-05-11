@@ -1,2 +1,46 @@
+
+==========================================================
+  DQN TRAFFIC URBAN — Intelligent Traffic Light Control
+==========================================================
+
+Deep Reinforcement Learning for urban traffic congestion
+reduction using Deep Q-Network (DQN) and SUMO simulation.
+ =============== How to use it===========================
+
 TO run the simulation with trained model use :  python train.py -m model_name -s step_number
 To train a new model we use : python train.py --train -e epochs_number -m new_model_name -s step_number
+----------------------------------------------------------
+OVERVIEW
+----------------------------------------------------------
+This project applies Deep Reinforcement Learning to optimize
+traffic light sequencing across a multi-intersection urban
+network. A DQN agent learns to minimize average vehicle
+waiting time by interacting with a realistic traffic
+simulation environment built with SUMO (Simulation of
+Urban MObility).
+ 
+----------------------------------------------------------
+METHOD
+----------------------------------------------------------
+The agent is based on the Deep Q-Network (DQN) algorithm:
+- Observes the current traffic state (queue lengths ( number of viheculs,
+  waiting times)
+- Selects the optimal traffic light phase to apply
+- Receives a reward based on reduction in waiting time
+- Updates its Q-network via experience replay and a
+  target network
+----------------------------------------------------------
+INSTALLATION
+----------------------------------------------------------
+  pip install -r requirements.txt
+ 
+
+ 
+----------------------------------------------------------
+TECH STACK
+----------------------------------------------------------
+- Deep Learning  : PyTorch
+- Simulation     : SUMO + TraCI
+- RL Algorithm   : Deep Q-Network (DQN) with Experience
+                   Replay & Target Network
+- Optimization   : Adam optimizer
