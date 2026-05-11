@@ -1,0 +1,2 @@
+TO run the simulation with trained model use :  python train.py -m model_name -s step_number
+To train a new model we use : python train.py --train -e epochs_number -m new_model_name -s step_number
